@@ -7,7 +7,7 @@ const USER = require("../models/user")
 
 
 const registered =asyncHandler( async(req,res)=>{
-const {firstName, lastName, email, genderm,DOB}=req
+const {firstName, lastName, email, gender,DOB}=req
 const user = USER.findOne({email:email})
 
 if(user){
