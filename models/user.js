@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const user = mongoose.Schema(
+const USER = mongoose.Schema(
   {
     // studentId: {
     //   type: mongoose.Schema.Types.ObjectId,
@@ -24,6 +24,10 @@ const user = mongoose.Schema(
       type: String,
       required:true
     },
+    gender: {
+      type: String,
+      required:[true, "please enter your password"]
+    },
     friends:{
         type:String
     }
@@ -33,4 +37,4 @@ const user = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("USER", user);
+module.exports = mongoose.model("USER", USER);
